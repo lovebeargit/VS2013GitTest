@@ -35,5 +35,22 @@ namespace TestProject
             }
             textBox1.Text = temp;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int[] a = new int[100];
+            
+            for (int i = 0; i < 100; i++)
+            {
+                Random r = new Random();
+                int j = r.Next(0, a.Length-1);
+                if (!a.Contains(j))
+                { 
+                    a[i] = j;
+                }   
+            }
+            comboBox1.DataSource = a;
+
+        }
     }
 }
