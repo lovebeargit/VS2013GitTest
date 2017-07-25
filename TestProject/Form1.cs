@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace TestProject
 {
@@ -38,19 +40,48 @@ namespace TestProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int[] a = new int[100];
-            
-            for (int i = 0; i < 100; i++)
+             int[] a = new int[10];
+             Random r = new Random();
+             int j;             
+            for (int i = 0; i < 10; i++)
             {
-                Random r = new Random();
-                int j = r.Next(0, a.Length-1);
-                if (!a.Contains(j))
-                { 
+                j = r.Next(0, a.Length+1);
+                if (a.Contains(j))
+                {
+                    i--;
+                    continue;
+                }
+                else
+                {
                     a[i] = j;
-                }   
+                }
+
             }
             comboBox1.DataSource = a;
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string xml = textBox2.Text.ToString();
+            Student s = new Student();
+            //s=xmlToData(xml);
+            
+        }
+        public string name;
+        private void button4_Click(object sender, EventArgs e)
+        {
+            name = textBox3.Text.ToString();
+            Form2 f2 = new Form2();
+            f2.Owner = this;
+            f2.Show();
+            
+        }
+       // public Student xmlToData(string xml)
+        //{
+            
+            //XmlSerializer serializer = new XmlSerializer(typeof(Student));
+            //return (Student)serializer.Deserialize(new StringReader(xml));
+        //}
     }
 }
