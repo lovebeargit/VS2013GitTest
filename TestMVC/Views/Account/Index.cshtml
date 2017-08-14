@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+@model IEnumerable<TestMVC.Models.SysUser>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <tr>
+                <th>@Html.DisplayNameFor(model=>model.UserName)
+                </th>
+                <th>@Html.DisplayNameFor(model => model.password)</th>
+             </tr>
+            @foreach(var item in Model)
+            {
+            <tr>
+                <td>@Html.DisplayFor(itemmodel => item.UserName)</td>
+                <td>@Html.DisplayFor(itemmodel => item.password)</td>
+                <td>@Html.ActionLink("Details", "Details", new { id = item.ID })</td>
+            </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

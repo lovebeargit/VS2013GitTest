@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>@ViewBag.LoginState</div>
+    <div style="width: 100%;">
+            <div id="Main">
+
+                <form method="post" role="form">
+                    <div class="block">
+                        <label class="label-line">登录用户名</label>
+                        <input type="text" id="input1" value="" class="input-text" name="i1"/> 
+                    </div>
+                    <div class="block">
+                        <label class="label-line">密码</label>
+                        <input type="password" id="input2" value="" class="input-text" name="i2"/> 
+                    </div>
+
+                    <div class="block">
+                        <input id="Submit1" type="submit" value="submit" />
+                    </div>
+
+                </form>
+                <div style="clear: both" />
+           
+        </div>
+    </div>
+
+</body>
+</html>
