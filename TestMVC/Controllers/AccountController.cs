@@ -16,11 +16,15 @@ namespace TestMVC.Controllers
         // GET: /Account/
         public ActionResult Index()
         {
+            //var Model= db.SysUser;
             return View(db.SysUser);
         }
 
-
-
+        public ActionResult Details()
+        {
+            //var id= 
+            return View(db.SysUser);
+        }
 
         public ActionResult Login()
         {
@@ -50,7 +54,7 @@ namespace TestMVC.Controllers
             {
                 ViewBag.LoginState = "不存在" + name;
             }
-            return View("Index");
+            return RedirectToAction("Index");
         }
 
 
