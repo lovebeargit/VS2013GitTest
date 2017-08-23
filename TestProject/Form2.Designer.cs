@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.userpanel1 = new Mycontrol.Userpanel();
+            this.mycombobox1 = new Mycontrol.Mycombobox();
             this.SuspendLayout();
             // 
             // label1
@@ -87,11 +88,20 @@
             this.userpanel1.Size = new System.Drawing.Size(100, 50);
             this.userpanel1.TabIndex = 5;
             // 
+            // mycombobox1
+            // 
+            this.mycombobox1.FormattingEnabled = true;
+            this.mycombobox1.Location = new System.Drawing.Point(15, 223);
+            this.mycombobox1.Name = "mycombobox1";
+            this.mycombobox1.Size = new System.Drawing.Size(100, 21);
+            this.mycombobox1.TabIndex = 6;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.mycombobox1);
             this.Controls.Add(this.userpanel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -114,5 +124,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Mycontrol.Userpanel userpanel1;
+        private Mycontrol.Mycombobox mycombobox1;
     }
 }

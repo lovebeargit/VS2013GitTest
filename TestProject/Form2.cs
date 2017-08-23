@@ -24,7 +24,7 @@ namespace TestProject
             label1.Text += f1.name;
 
             this.Size = new Size(500, 500);
-            this.userpanel1.pb.Image = Image.FromFile(@"\..\pic\1.PNG");
+            this.userpanel1.pb.Image = Image.FromFile(@"\pic\1.PNG");
            
             this.userpanel1.lb1.Text = "Name";
             this.userpanel1.lb2.Text = "thelastmessage";
@@ -32,6 +32,9 @@ namespace TestProject
            
 
             //this.mysearch1.pb.Image = Image.FromFile("s.PNG");
+
+            //mycombobox1.Items.Add();
+            mycombobox1.lb.Text = "xiaoming";
         }
 
         private void button1_Click(object sender, EventArgs e)

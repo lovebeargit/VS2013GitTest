@@ -46,6 +46,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Myclock.cs" />
+    <Compile Include="Mycombobox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Userpanel.cs">
       <SubType>Component</SubType>
